@@ -1,3 +1,5 @@
+homepage:
+    pattern: /homepage
 zlab_news:
     resource: "@ZlabNewsBundle/Resources/config/routing.yml"
     prefix:   /
@@ -20,6 +22,22 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+#SonataAdminBundle
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+ 
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+#SonataUserBundle
+sonata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
 
 # Internal routing configuration to handle ESI
 #_internal:
